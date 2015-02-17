@@ -9449,7 +9449,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sProcessing": "<img src='../assets/xhrs/images/loading.gif'> Processing...",
+			"sProcessing": "<img src='../assets/administrator/images/loading.gif'> Processing...",
 		
 		
 			/**

@@ -1,7 +1,7 @@
 <?php
 //config.php
 
-$config['base_url'] = 'http://localhost/swisher1.1/admin/';
+$config['base_url'] = 'http://localhost/demo-sc-monitoring/admin/';
 
 $config['alias'] = 'xhrs';
 

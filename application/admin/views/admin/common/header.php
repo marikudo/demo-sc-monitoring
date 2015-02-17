@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <title>xhrs - <?=$title?></title>
-    <link rel="icon" type="image/png" href="<?=base_url('assets/xhrs/')?>images/logo.png" />
+    <title>Administrator - <?=$title?></title>
+    <link rel="icon" type="image/png" href="<?=base_url('assets/admin/')?>images/logo.png" />
      <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500' rel='stylesheet' type='text/css'>
      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css'>
       <?php
@@ -77,7 +77,7 @@
         </button>
         
         <div class="navbar-brand">
-          <a href="http://localhost/demo-reservation/xhrs">
+          <a href="<?=base_url()?>admin/home">
             <strong>Crackerjack</strong> <small style="font-size: 14px;">Web Services</small>
           </a>
         </div>
@@ -105,11 +105,11 @@
 
 
              <ul class="dropdown-menu" role="menu" aria-labelledby="user-dropdown">
-                        <li><a href="http://localhost/swisher/xhrs/account">&nbsp;<i class="fa fa-info"></i>&nbsp; My Account Information</a></li>
-                        <li><a href="http://localhost/swisher/xhrs/account/settings"><i class="fa fa-gear"></i> Account Settings</a></li>
+                        <li><a href="<?=base_url('admin/')?>account">&nbsp;<i class="fa fa-info"></i>&nbsp; My Account Information</a></li>
+                        <li><a href="<?=base_url('admin/')?>account/settings"><i class="fa fa-gear"></i> Account Settings</a></li>
 
                         <li class="divider"></li>
-                        <li><a href="http://localhost/swisher/xhrs/home/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        <li><a href="<?=base_url('admin/')?>home/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                       </ul>
             </li>
           </ul>
@@ -148,19 +148,19 @@
                                           }
                                        }
                               echo '<li class="'.$active.' panel dropdown">';
-                              echo '<a href="#'.$display['_url'].'_btn_dropdown" id="'.$display['_url'].'_btn" data-toggle="collapse" data-parent="#menu-bar" class="dropdown-toggle '.$isInside.'"><i class="'.$a.'"></i> <span>'.$display['module'].'</span> <b class="caret pull-right" style="margin-top:10px"></b></a>';
+                              echo '<a href="#'.$display['_url'].'_btn_dropdown" id="'.$display['_url'].'_btn" data-toggle="collapse" data-parent="#menu-bar" class="dropdown-toggle '.$isInside.' nav-'.$display['module'].'"><i class="'.$a.'"></i> <span>'.$display['module'].'</span> <b class="caret pull-right" style="margin-top:10px"></b></a>';
                               echo '<ul class="panel-collapse collapse '.$isInsidex.'"  id="'.$display['_url'].'_btn_dropdown">';
                                       foreach ($display['sub'] as $subDispaly) {
                                         $ab = ($subDispaly['_icon']=="") ? 'fa fa-file-text' : $subDispaly['_icon'];
                                         $xy = explode('/', $subDispaly['_url']);
                                         $active = (getController()==str_replace("-","_",$xy[0])) ? 'active' : null;
-                                       echo '<li class="'.$active.'"><a href="'.base_url('xhrs/'.$subDispaly['_url']).'"><i class="'.$ab.'"></i> '.$subDispaly['module'].'</a></li>';
+                                       echo '<li class="'.$active.'"><a href="'.base_url('admin/'.$subDispaly['_url']).'" class="nav-'.$display['module'].'"><i class="'.$ab.'"></i> '.$subDispaly['module'].'</a></li>';
                                       }
                                echo '</ul>';
 
                                       }else{
                               echo '<li class="'.$active.'">';
-                              echo '<a href="'.base_url('xhrs/'.$display['_url']).'" ><i class="'.$a.'"></i> <span>'.$display['module'].'</span> </a>';
+                              echo '<a href="'.base_url('admin/'.$display['_url']).'" class="nav-'.$display['module'].'"><i class="'.$a.'"></i> <span>'.$display['module'].'</span> </a>';
 
                                       }
 
@@ -174,6 +174,7 @@
 
                     }
                 ?>
+             
               </ul>
 
         </div>

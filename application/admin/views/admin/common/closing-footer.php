@@ -37,6 +37,12 @@ echo $require_footer;
     ?>
     <script type="text/javascript">
     $(document).ready(function (argument) {
+      var h  = $('.left-panel-container').height();
+         h = h - 30;
+         $('.slim').slimscroll({
+          height: h
+         });
+      
         if ( $( "#calendar" ).length ) {
              $('#calendar').fullCalendar({
               header: {

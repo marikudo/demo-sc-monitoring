@@ -161,15 +161,35 @@ body{
 	padding-top: 52px;
 }
 
+.left-panel-container .nav li.nav-header {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+	padding: 10px 15px;
+}
+.left-panel-container .nav li.active a {
+	color: #fff;
+}
+.left-panel-container ul.nav li a i {
+	position: relative;
+	float: left;
+	width: 40px;
+	margin: -10px -10px;
+	margin-right: 5px;
+	overflow: hidden;
+	line-height: 40px;
+	text-align: center;
+}
 .left-panel-container .nav li.active {
-background: #131e26;
+/*background: #1c2b36;
+*/
 /* border-top: 1px solid #272a2e; */
 }
 .left-panel-container .nav li a:hover, .left-side .nav li a:focus {
 	background: #1c2b36 ;
 	color: #fff;
 }
-.left-panel-containere ul.nav li a {
+.left-panel-container ul.nav li a {
 	font-size: 14px;
 	position: relative;
 	display: block;
@@ -183,12 +203,21 @@ background: #131e26;
 	transition: background-color .2s ease-in-out 0s;
 }
 
+/*nav icon*/
+.nav-Dashboard i.fa{
+	font-size: 18px;
+}
+
 .right-panel-container{
 	height: 100%;
 	margin-left: 228px;
 	padding-top: 52px;
 	margin-left: 228px;
 	
+}
+
+.right-panel-container .content{
+	margin: 0 15px;
 }
 
 .application-user .nav>li>a:focus, .application-user .nav li a:hover {
@@ -204,4 +233,45 @@ border-color: #337ab7;
 .application-user .nav .open .dropdown-toggle.user, .application-user .nav .active .dropdown-toggle.user{
 	color: #fff;
 	padding-top:17px;
+}
+
+/*pages*/
+.table-container{
+  background: #fff; 
+  margin: 20px auto;
+
+  border: 1px solid #ddd;  
+}
+
+.table-container .inner-container{
+    padding: 20px 20px;
+}
+
+.action-container{
+  border-bottom: 1px solid #ddd;
+  padding: 15px 10px;
+}
+
+.custom-table-container{
+	padding-right:10px;
+	padding-left:10px;
+}
+div.btns .btn{
+	margin-right: 3px;
+}
+div.btns{
+	float: left;
+}
+/*datatables*/
+.sorting {
+background: url('../datatables/images/sort_both.png') no-repeat center right;
+}
+.sorting_asc {
+background: url('../datatables/images/sort_asc.png') no-repeat center right;
+}
+.sorting_desc {
+background: url('../datatables/images/sort_desc.png') no-repeat center right;
+}
+.align-center {
+text-align: center;
 }
